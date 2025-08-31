@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# 🗺️ Tourist Landmark Path Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application for finding the shortest path between tourist landmarks. The frontend is built with React, and the backend uses Flask with a Breadth-First Search (BFS) algorithm to find the optimal route.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- **Interactive Graph Visualization:** A visual representation of landmarks and connections using `react-force-graph-2d`.
+- **Shortest Path Algorithm:** Utilizes a Breadth-First Search (BFS) algorithm to find the shortest path in terms of the number of stops.
+- **Dynamic Path Highlighting:** The found path is highlighted in the graph for clear visualization.
+- **RESTful API:** A simple Flask backend that serves a REST API endpoint for pathfinding.
+- **Responsive UI:** A clean and modern user interface built with React.
 
-### `npm start`
+## ⚙️ Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend
+- **React:** A JavaScript library for building user interfaces.
+- **`axios`:** A promise-based HTTP client for making API requests.
+- **`react-force-graph-2d`:** A component for visualizing graph data.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend
+- **Flask:** A lightweight Python web framework.
+- **`flask-cors`:** A Flask extension for handling Cross-Origin Resource Sharing.
+- **`collections.deque`:** Used to implement an efficient queue for the BFS algorithm.
 
-### `npm test`
+## 🚀 Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js (with npm or yarn)
+- Python 3.x
+- `pip` (Python package installer)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/YOUR-USERNAME/Tourist-path-finder.git](https://github.com/YOUR-USERNAME/Tourist-path-finder.git)
+    cd Tourist-path-finder
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2.  **Set up the backend (Flask):**
+    ```bash
+    # Navigate into the backend directory
+    cd backend  
+    # Create a virtual environment (recommended)
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    # Install the required Python packages
+    pip install Flask Flask-CORS
+    ```
 
-### `npm run eject`
+3.  **Set up the frontend (React):**
+    ```bash
+    # Navigate back to the project root and then into the frontend directory
+    cd ../frontend
+    # Install the Node.js dependencies
+    npm install 
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Running the Application
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1.  **Start the backend server:**
+    Open a new terminal window or tab, navigate to the **backend** directory, and run:
+    ```bash
+    python app.py
+    ```
+    The server will start on `http://127.0.0.1:5000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2.  **Start the frontend development server:**
+    Open another new terminal window or tab, navigate to the **frontend** directory, and run:
+    ```bash
+    npm start
+    ```
+    This will open the application in your browser at `http://localhost:3000`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📌 Usage
 
-## Learn More
+- Use the "Start" and "Destination" dropdown menus to select two landmarks.
+- The path will be automatically calculated and displayed below the dropdowns.
+- The path will be highlighted in red on the graph visualization.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🤝 Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/YOUR-USERNAME/Tourist-path-finder/issues).
 
-### Code Splitting
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
